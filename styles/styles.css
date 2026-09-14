@@ -1,0 +1,533 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/*font-family: "Roboto", sans-serif;*/
+/*font-family: "Press Start 2P", system-ui;*/
+/*font-family: "Michroma", sans-serif;*/
+/*font-family: "Source Code Pro", monospace;*/
+/*font-family: "IBM Plex Sans", sans-serif;*/
+
+:root {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 16px;
+    /*color: #333;*/
+    color: #333333;
+    /*background-color: #03041B;*/
+    background-color: #ffffff;
+
+    /* Variables */
+    --color-gradiente: linear-gradient(90deg, #FFFFFF, #FFFFFF, #6CACE4, #6CACE4);
+    --color-gradiente_2: linear-gradient(90deg, #6CACE4, #6CACE4, #FFFFFF, #FFFFFF, #FFB81C, #FFFFFF, #FFFFFF, #6CACE4, #6CACE4);
+    --color-gradiente_3: linear-gradient(135deg, #ffffff, #f0efd3);
+}
+
+body{
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+*{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ----------------------------------- */
+/* ENCABEZADO */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  gap: 5px;
+  top: 0;
+  background-image: var(--color-gradiente);
+  height: 80px;
+  padding: 10px;
+}
+
+.header .logo img{
+  background-color: #ffffff;
+  height: 42px;
+  width: 100px;
+}
+
+.header .logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.header .logo:hover{
+  box-shadow: 0px 0px 10px 0px rgba(255,255,255,255);
+  background-image: linear-gradient(45deg, #6CACE4, #FFB81C);
+}
+
+/* ----------------------------------- */
+/* MAIN INDEX */
+
+.main-index{
+  flex: 1;
+  background-image: url('../recursos/imagenes/negocio/oficina1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+
+.main-index h1{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  font-style: italic;
+  color: #FFFFFF;
+  padding: 20px 0px 20px 0px;
+  background-color: rgba(14, 14, 14, 0.75);
+  border-radius: 15px;
+  /* border: 3px solid #e0e04b5b; */
+  border: 1px solid #FFFFFF;
+}
+
+.main-index h2{
+  font-weight: 500;
+}
+
+.main-index h3{
+  font-weight: 400;
+}
+
+.main-index img{
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0px 20px 0px;
+}
+
+.main-index figcaption{
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+  color: #FFFFFF;
+}
+
+.main-index p{
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+.main-index ul{
+  font-size: 15px;
+  line-height: 2;
+}
+
+.main-index .presentacion{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(14, 14, 14, 0.75);
+  border-radius: 15px;
+  /* border: 3px solid #e0e04b5b; */
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.main-index .informacion-general{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "titulo"
+    "intro"
+    "destacado";
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: rgba(14, 14, 14, 0.65);
+  border-radius: 15px;
+  /* border: 3px solid #e0e04b5b; */
+  border: 1px solid #FFFFFF;
+}
+
+.main-index .informacion-general h2{
+  grid-area: titulo;
+  align-self: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.main-index .informacion-general .quienes-somos{
+  grid-area: intro;
+  text-align: center;
+  background-color: rgba(231, 231, 183, 0.65);
+  /* background-color: rgba(14, 14, 14, 0.75); */
+  border-radius: 15px;
+  /* border: 3px solid #e0e04b5b; */
+  height: auto;
+  padding: 10px;
+}
+
+.main-index .informacion-general .por-que-elegirnos{
+  grid-area: destacado;
+  text-align: center;
+  background-color: rgba(231, 231, 183, 0.65);
+  /* background-color: rgba(14, 14, 14, 0.75); */
+  border-radius: 15px;
+  /* border: 3px solid #e0e04b5b; */
+  height: auto;
+  padding: 10px;
+}
+
+.main-index .servicios{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: rgba(14, 14, 14, 0.75);
+  border-radius: 15px;
+  /* border: 3px solid #e0e04b5b; */
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.main-index .servicios ul{
+  margin: 10px;
+  padding-left: 20px;
+  color: #FFFFFF;
+}
+
+/* ----------------------------------- */
+/* MAIN OTROS */
+
+.main{
+  flex: 1;
+  background-image: var(--color-gradiente_3);
+  padding: 10px;
+}
+
+.main h1{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  font-style: italic;
+  color: #333333;
+  padding: 20px 0px 20px 0px;
+}
+
+.main h2{
+  font-weight: 500;
+}
+
+.main h3{
+  font-weight: 400;
+}
+
+.main img{
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0px 20px 0px;
+}
+
+.main figcaption{
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+  color: #333333;
+}
+
+.main p{
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+.main ul{
+  font-size: 15px;
+  line-height: 2;
+}
+
+.main .presentacion{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.main .section-sobremi-profesional{
+  text-align: center;
+  background-color: #e7e7b75b;
+  border-radius: 15px;
+  border: 2px solid #e0e04b5b;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+.main .section-sobremi-personal{
+  text-align: center;
+  background-color: #e7e7b75b;
+  border-radius: 15px;
+  border: 2px solid #e0e04b5b;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+.main .section-proyectos{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "titulo"
+    "p1"
+    "p2"
+    "p3"
+    "p4";
+  align-items: start;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.main .section-proyectos h2{
+  grid-area: titulo;
+  align-self: center;
+  text-align: center;
+}
+
+.main .section-proyectos ul{
+  display: contents;
+  list-style: none;
+}
+
+.main .section-proyectos .proyecto1{
+  grid-area: p1;
+  background-color: #e7e7b75b;
+  border-radius: 15px;
+  border: 2px solid #e0e04b5b;
+  padding: 20px;
+}
+.main .section-proyectos .proyecto2{
+  grid-area: p2;
+  background-color: #e7e7b75b;
+  border-radius: 15px;
+  border: 2px solid #e0e04b5b;
+  padding: 20px;
+}
+.main .section-proyectos .proyecto3{
+  grid-area: p3;
+  background-color: #e7e7b75b;
+  border-radius: 15px;
+  border: 2px solid #e0e04b5b;
+  padding: 20px;
+}
+.main .section-proyectos .proyecto4{
+  grid-area: p4;
+  background-color: #e7e7b75b;
+  border-radius: 15px;
+  border: 2px solid #e0e04b5b;
+  padding: 20px;
+}
+
+.main .section-faq{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.main .section-faq ul{
+  margin: 10px;
+  padding-left: 20px;
+}
+
+.main .section-contacto-info{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.main .section-contacto-info ul{
+  margin: 10px;
+  padding-left: 20px;
+}
+
+.main .section-contacto-form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+/* ----------------------------------- */
+/* NAVEGADOR */
+
+.nav .nav__list{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.nav .nav__list li{
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  padding: 5px;
+}
+
+.nav li:first-child{
+  margin-right: auto;
+}
+
+.nav__list a{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+  font-size: 15px;
+  font-weight: 600;
+  height: 100%;
+  padding: 5px;
+}
+
+.nav a:hover{
+  background-color:rgba(255, 255, 255, 0.357);
+}
+
+/* ----------------------------------- */
+/* FOOTER */
+
+.footer {
+  text-align: center;
+  display: block;
+  align-items: center;
+  position: relative;
+  height: auto;
+  min-height: 80px;
+  padding-bottom: 15px;
+  background-image: var(--color-gradiente_2);
+}
+
+.footer p{
+  text-align: center;
+  font-style: italic;
+  font-size: 10px;
+  color:rgb(65, 60, 60);
+  padding-top: 15px;
+}
+
+.footer img{
+  width: 40px;
+  height: 40px;
+}
+
+.footer .ws{
+  display: inline-flex;
+  position: static;
+  margin: 10px 5px 0;
+}
+
+.footer .ig{
+  display: inline-flex;
+  position: static;
+  margin: 10px 5px 0;
+}
+
+.footer .ig:hover{
+  box-shadow: 0px 0px 10px 0px rgba(255,255,255,255);
+  background-image: linear-gradient(45deg, #FFCC52, #D03B99);
+}
+
+.footer .ws:hover{
+  box-shadow: 0px 0px 10px 0px rgba(255,255,255,255);
+  background-color: #29A71A;
+}
+
+/* ----------------------------------- */
+/* MEDIA QUERIES */
+
+@media (min-width: 768px){
+  .footer p{
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1024px){
+  .main-index .informacion-general{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "titulo titulo"
+      "intro destacado";
+  }
+
+  .main-index .informacion-general .quienes-somos{
+  height: 100%;
+}
+
+.main-index .informacion-general .por-que-elegirnos{
+  height: 100%;
+}
+
+  .main .section-proyectos{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "titulo titulo"
+      "p1 p2"
+      "p3 p4";
+  }
+
+  .footer p{
+    font-size: 15px;
+  }
+
+  .footer{
+    height: 80px;
+    min-height: 0;
+    padding-bottom: 0;
+  }
+
+  .footer .ws{
+    display: flex;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    margin: 0;
+  }
+
+  .footer .ig{
+    display: flex;
+    position: fixed;
+    right: 75px;
+    bottom: 10px;
+    margin: 0;
+  }
+}
