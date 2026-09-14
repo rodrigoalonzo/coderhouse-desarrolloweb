@@ -48,7 +48,7 @@ body{
   gap: 5px;
   top: 0;
   background-image: var(--color-gradiente);
-  height: 80px;
+  height: auto;
   padding: 10px;
 }
 
@@ -381,6 +381,10 @@ body{
 
 /* ----------------------------------- */
 /* NAVEGADOR */
+
+.navbar.navbar-expand-md.navbar-light {
+  background-color: #ffffff00; /* Color de fondo claro para la navbar */
+}
 
 .nav .nav__list{
   list-style: none;
