@@ -13,9 +13,7 @@
 :root {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 16px;
-    /*color: #333;*/
     color: #333333;
-    /*background-color: #03041B;*/
     background-color: #ffffff;
 
     /* Variables */
@@ -371,6 +369,10 @@ body{
   padding: 30px;
 }
 
+.main .intro-contacto{
+  text-align: center;
+}
+
 .main .section-contacto-info{
   display: flex;
   flex-direction: column;
@@ -380,9 +382,86 @@ body{
   padding: 20px;
 }
 
-.main .section-contacto-info ul{
-  margin: 10px;
-  padding-left: 20px;
+.main .section-contacto-info h2{
+  text-align: center;
+}
+
+.main .section-contacto-cards{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3";
+  align-items: stretch;
+  gap: 20px;
+  padding: 20px;
+}
+
+.main .section-contacto-cards .card-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 10px;
+}
+
+.main .section-contacto-cards img{
+  width: 50px;
+}
+
+.main .section-contacto-cards p{
+  padding: 0px;
+  font-size: 80%;
+}
+
+.main .section-contacto-cards .card-body a{
+  font-size: 80%;
+  border: none;
+}
+
+.main .section-contacto-cards a:hover{
+  background-color: #5a9bd8;
+}
+
+.main .section-contacto-cards .card-mail{
+  grid-area: card1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  text-align: center;
+  background-color: #e7e7b75b;
+  border-radius: 15px;
+  border: 2px solid #e0e04b5b;
+  padding: 20px;
+}
+
+.main .section-contacto-cards .card-whatsapp{
+  grid-area: card2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  text-align: center;
+  background-color: #e7e7b75b;
+  border-radius: 15px;
+  border: 2px solid #e0e04b5b;
+  padding: 20px;
+}
+
+.main .section-contacto-cards .card-github{
+  grid-area: card3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  text-align: center;
+  background-color: #e7e7b75b;
+  border-radius: 15px;
+  border: 2px solid #e0e04b5b;
+  padding: 20px;
 }
 
 .main .section-contacto-form{
@@ -392,6 +471,30 @@ body{
   margin-top: 40px;
   margin-bottom: 40px;
   padding: 20px;
+}
+
+.main .section-contacto-form h2{
+  text-align: center;
+}
+
+.main .section-contacto-form .formulario-contacto{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #e7e7b75b;
+  border-radius: 15px;
+  border: 2px solid #e0e04b5b;
+  padding: 20px;
+}
+
+.main .section-contacto-form .formulario-contacto button{
+  align-self: center;
+  border: none;
+  border-radius: 5px;
+}
+
+.main .section-contacto-form .formulario-contacto button:hover{
+  background-color: #5a9bd8;
 }
 
 /* ----------------------------------- */
@@ -507,6 +610,14 @@ body{
     width: 85%;
   }
 
+  .main .section-contacto-cards .card-body p{
+    font-size: 100%;
+  }
+
+  .main .section-contacto-cards .card-body a{
+    font-size: 100%;
+  }
+
 }
 
 @media (min-width: 1024px){
@@ -531,6 +642,31 @@ body{
 
   .main .section-proyectos .carousel.slide{
     width: 65%;
+  }
+
+  .main .section-contacto-cards{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+    "card1 card2 card3";
+  }
+
+  .main .section-contacto-cards .card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+    .main .section-contacto-cards .card-mail{
+    height: 100%;
+  }
+
+  .main .section-contacto-cards .card-whatsapp{
+    height: 100%;
+  }
+
+  .main .section-contacto-cards .card-github{
+    height: 100%;
   }
 
   .footer p{
