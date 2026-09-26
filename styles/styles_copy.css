@@ -63,20 +63,11 @@ body{
   align-items: center;
   border-radius: 5px;
   padding: 5px;
-  transform: scale(1);
-  transition: transform 0.5s ease;
 }
 
 .header .logo:hover{
   box-shadow: 0px 0px 10px 0px rgba(255,255,255,255);
   background-image: linear-gradient(45deg, #6CACE4, #FFB81C);
-  transform: scale(1.05);
-  transition: transform 0.5s ease;
-}
-
-.header .logo:active{
-  transform: scale(1.10);
-  transition: transform 0.5s ease;
 }
 
 /* ----------------------------------- */
@@ -364,21 +355,13 @@ body{
   padding: 20px;
 }
 
-.main .section-faq .accordion-header:hover{
-  background-color: rgb(108, 172, 228, 0.3);
-}
-
 .main .section-faq .accordion-button.collapsed{
   background-color: rgb(108, 172, 228, 0.30);
-  transform: scale(1);
-  transition: transform 0.5s ease;
 }
 
 .main .section-faq .accordion-button:not(.collapsed) {
   background-color: rgb(108, 172, 228, 1);
   color: #ffffff;
-  transform: scale(1.01);
-  transition: transform 0.5s ease;
 }
 
 .main .section-faq .accordion-body{
@@ -440,8 +423,6 @@ body{
 
 .main .section-contacto-cards a:hover{
   background-color: #5a9bd8;
-  transform: scale(1.05);
-  transition: transform 0.5s ease;
 }
 
 .main .section-contacto-cards .card-mail{
@@ -514,13 +495,6 @@ body{
 
 .main .section-contacto-form .formulario-contacto button:hover{
   background-color: #5a9bd8;
-  transform: scale(1.05);
-  transition: transform 0.5s ease;
-}
-
-.main .section-contacto-form .formulario-contacto input:focus{
-  outline: none;
-  border: 3px solid #5a9bd8;
 }
 
 /* ----------------------------------- */
@@ -530,34 +504,45 @@ body{
   background-color: #ffffff00; /* Color de fondo claro para la navbar */
 }
 
-.navbar.navbar-expand-md.bg-transparent.navbar-transparent a{
-  text-align: center;
-}
-
-.navbar.navbar-expand-md.bg-transparent.navbar-transparent .container{
+.nav .nav__list{
+  list-style: none;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 5px;
 }
 
-.navbar.navbar-expand-md.bg-transparent.navbar-transparent .nav-link.active{
-  color: rgb(0, 0, 0);
-  font-weight: semi-bold;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+.nav .nav__list li{
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  padding: 5px;
 }
 
-.navbar.navbar-expand-md.bg-transparent.navbar-transparent a:hover{
-  color:rgba(255, 255, 255, 0.9);
-  background-color: rgba(255, 183, 28, 0.2);
-  border-radius: 10px;
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
+.nav li:first-child{
+  margin-right: auto;
 }
 
-.navbar.navbar-expand-md.bg-transparent.navbar-transparent a:active{
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: scale(1.10);
-  transition: transform 0.3s ease;
+.nav__list a{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+  font-size: 15px;
+  font-weight: 600;
+  height: 100%;
+  padding: 5px;
+}
+
+.nav a:hover{
+  background-color:rgba(255, 255, 255, 0.357);
 }
 
 /* ----------------------------------- */
@@ -602,13 +587,11 @@ body{
 .footer .ig:hover{
   box-shadow: 0px 0px 10px 0px rgba(255,255,255,255);
   background-image: linear-gradient(45deg, #FFCC52, #D03B99);
-  transform: scale(1.05);
 }
 
 .footer .ws:hover{
   box-shadow: 0px 0px 10px 0px rgba(255,255,255,255);
   background-color: #29A71A;
-  transform: scale(1.05);
 }
 
 /* ----------------------------------- */
