@@ -20,15 +20,6 @@
           alt="Logo de la empresa"
         />
       </a>
-      <!-- <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="sobre-mi.html">Sobre mí</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="servicios.html">FAQ</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav> -->
       <nav class="navbar navbar-expand-md bg-transparent navbar-transparent">
         <div class="container">
           <button
@@ -72,44 +63,131 @@
     </header>
     <main class="main">
       <h1>Contacto</h1>
-      <p>
+      <p class="intro-contacto">
         ¿Tenés un proyecto en mente o simplemente querés conversar sobre cómo la
         tecnología puede ayudar a tu negocio? Contactame por cualquiera de estos
         medios y te responderé a la brevedad.
       </p>
       <section class="section-contacto-info" id="section-contacto-info">
         <h2>Información de contacto</h2>
-        <ul>
-          <li>Email: rodrigojavieralonzo@gmail.com</li>
-          <li>Whatsapp: +54 9 351 615 2780</li>
-          <li>
-            GitHub:
-            <a
-              href="https://github.com/rodrigoalonzo"
-              target="_blank"
-              rel="noopener noreferrer"
-              >rodrigoalonzo</a
-            >
-          </li>
-        </ul>
+        <section class="section-contacto-cards" id="section-contacto-cards">
+          <div class="card-mail">
+            <img
+              src="../recursos/imagenes/logos/gmailLogo2.png"
+              class="card-img-top"
+              alt="Logo de Gmail"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Email</h5>
+              <p class="card-text">
+                Contactame por correo electrónico y te responderé a la brevedad.
+                Mi correo electrónico es rodrigojavieralonzo@gmail.com
+              </p>
+              <a
+                href="mailto:rodrigojavieralonzo@gmail.com"
+                class="btn btn-primary"
+                >Enviar correo</a
+              >
+            </div>
+          </div>
+          <div class="card-whatsapp">
+            <img
+              src="../recursos/imagenes/logos/whatsappLogo3.png"
+              class="card-img-top"
+              alt="Logo de WhatsApp"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Whatsapp</h5>
+              <p class="card-text">
+                Contactame por WhatsApp y te responderé a la brevedad. Mi número
+                es +54 9 351 615 2780
+              </p>
+              <a
+                href="https://wa.me/543516152780"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+                >Enviar WhatsApp</a
+              >
+            </div>
+          </div>
+          <div class="card-github">
+            <img
+              src="../recursos/imagenes/logos/githubLogo.png"
+              class="card-img-top"
+              alt="Logo de GitHub"
+            />
+            <div class="card-body">
+              <h5 class="card-title">GitHub</h5>
+              <p class="card-text">
+                Visita mi perfil de GitHub para ver mis proyectos y
+                contribuciones.
+              </p>
+              <a
+                href="https://github.com/rodrigoalonzo"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+                >Ir a GitHub</a
+              >
+            </div>
+          </div>
+        </section>
       </section>
       <section class="section-contacto-form" id="section-contacto-form">
         <h2>Formulario de contacto</h2>
-        <form action="#" method="post">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required />
-          <br />
-          <label for="email">Correo electrónico:</label>
-          <input type="email" id="email" name="email" required />
-          <br />
-          <label for="empresa">Empresa:</label>
-          <input type="text" id="empresa" name="empresa" required />
-          <br />
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-          <br />
-          <br />
-          <button type="submit">Enviar</button>
+        <form class="formulario-contacto" action="" method="get">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input
+              id="nombre"
+              name="nombre"
+              class="form-control"
+              type="text"
+              placeholder="Tu nombre completo"
+              aria-label="nombre"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="form-control"
+              placeholder="Tu correo electrónico"
+              aria-describedby="emailHelp"
+              required
+            />
+            <div id="emailHelp" class="form-text">
+              Nunca compartiremos tu correo electrónico con alguien más.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="empresa" class="form-label">Empresa</label>
+            <input
+              id="empresa"
+              name="empresa"
+              class="form-control"
+              type="text"
+              placeholder="Tu empresa"
+              aria-label="empresa"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              class="form-control"
+              placeholder="Tu mensaje"
+              rows="5"
+              maxlength="500"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
       </section>
     </main>

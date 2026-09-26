@@ -20,15 +20,6 @@
           alt="Logo de la empresa"
         />
       </a>
-      <!-- <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="sobre-mi.html">Sobre mí</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="servicios.html">FAQ</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav> -->
       <nav class="navbar navbar-expand-md bg-transparent navbar-transparent">
         <div class="container">
           <button
@@ -74,28 +65,88 @@
       <h1>Proyectos</h1>
       <section class="section-proyectos" id="section-proyectos">
         <h2>Algunos de mis proyectos</h2>
-        <ul>
-          <li class="proyecto1">
-            <strong>GestionPro</strong> — Sistema de gestión administrativa y
-            facturación para comercios minoristas, con control de stock en
-            tiempo real y reportes automáticos de ventas.
-          </li>
-          <li class="proyecto2">
-            <strong>TurnosYa</strong> — Aplicación web para la reserva y
-            administración de turnos, pensada para consultorios y estudios
-            profesionales que necesitan optimizar su agenda diaria.
-          </li>
-          <li class="proyecto3">
-            <strong>LogiTrack</strong> — Plataforma de escritorio para el
-            seguimiento y control logístico de pedidos, diseñada para una pyme
-            del rubro distribución con múltiples depósitos.
-          </li>
-          <li class="proyecto4">
-            <strong>ClientFlow</strong> — CRM a medida para el seguimiento de
-            clientes y oportunidades comerciales, con paneles de indicadores
-            para la toma de decisiones.
-          </li>
-        </ul>
+        <div
+          id="carouselExampleAutoplaying"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+              <img
+                src="../recursos/imagenes/aplicaciones/gestionpro_black.jpg"
+                class="d-block w-100"
+                alt="Imagen de aplicación GestionPro"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img
+                src="../recursos/imagenes/aplicaciones/turnosya_black.jpg"
+                class="d-block w-100"
+                alt="Imagen de aplicación TurnosYa"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img
+                src="../recursos/imagenes/aplicaciones/logitrack_black.jpg"
+                class="d-block w-100"
+                alt="Imagen de aplicación LogiTrack"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img
+                src="../recursos/imagenes/aplicaciones/clientflow_black.jpg"
+                class="d-block w-100"
+                alt="Imagen de aplicación ClientFlow"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </section>
     </main>
     <footer class="footer">

@@ -20,15 +20,6 @@
           alt="Logo de la empresa"
         />
       </a>
-      <!-- <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="sobre-mi.html">Sobre mí</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="servicios.html">FAQ</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav> -->
       <nav class="navbar navbar-expand-md bg-transparent navbar-transparent">
         <div class="container">
           <button
@@ -73,61 +64,150 @@
     <main class="main">
       <h1>Preguntas frecuentes</h1>
       <section class="section-faq" id="section-faq">
-        <ul>
-          <li>
-            <strong
-              >¿Qué tipo de empresas pueden solicitar tus servicios?</strong
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                <strong
+                  >¿Qué tipo de empresas pueden solicitar tus servicios?</strong
+                >
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
             >
-            Principalmente trabajo con pequeñas y medianas empresas de diversos
-            rubros: comercios, estudios profesionales, distribuidoras, entre
-            otros. Si tu negocio tiene un proceso que hoy se hace de forma
-            manual o con herramientas que ya no dan abasto, probablemente pueda
-            ayudarte.
-          </li>
-          <li>
-            <strong>¿Cuánto tiempo demora el desarrollo de un proyecto?</strong>
-            Depende de la complejidad y el alcance de cada solución. Un proyecto
-            simple puede estar listo en pocas semanas, mientras que sistemas más
-            completos pueden llevar algunos meses. En la primera reunión te doy
-            una estimación concreta según tus necesidades.
-          </li>
-          <li>
-            <strong>¿Ofrecés soporte una vez entregado el sistema?</strong> Sí.
-            El acompañamiento no termina con la entrega: ofrezco mantenimiento,
-            corrección de errores y mejoras continuas para que la solución siga
-            funcionando bien a medida que tu negocio crece.
-          </li>
-          <li>
-            <strong
-              >¿Qué pasa si mi negocio ya usa otro sistema y quiero migrar o
-              integrar algo nuevo?</strong
+              <div class="accordion-body">
+                Principalmente trabajo con pequeñas y medianas empresas de
+                diversos rubros: comercios, estudios profesionales,
+                distribuidoras, entre otros. Si tu negocio tiene un proceso que
+                hoy se hace de forma manual o con herramientas que ya no dan
+                abasto, probablemente pueda ayudarte.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                <strong
+                  >¿Cuánto tiempo demora el desarrollo de un proyecto?</strong
+                >
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
             >
-            No hay problema. Antes de desarrollar, analizamos qué herramientas
-            ya usás y evaluamos si conviene integrarlas, migrarlas o
-            reemplazarlas, siempre buscando la opción que menos afecte tu
-            operación diaria.
-          </li>
-          <li>
-            <strong
-              >¿Qué pasa si mi negocio ya usa otro sistema y quiero migrar o
-              integrar algo nuevo?</strong
+              <div class="accordion-body">
+                Depende de la complejidad y el alcance de cada solución. Un
+                proyecto simple puede estar listo en pocas semanas, mientras que
+                sistemas más completos pueden llevar algunos meses. En la
+                primera reunión te doy una estimación concreta según tus
+                necesidades.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                <strong>¿Ofrecés soporte una vez entregado el sistema?</strong>
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
             >
-            No hay problema. Antes de desarrollar, analizamos qué herramientas
-            ya usás y evaluamos si conviene integrarlas, migrarlas o
-            reemplazarlas, siempre buscando la opción que menos afecte tu
-            operación diaria.
-          </li>
-          <li>
-            <strong
-              >¿Tus tarifas están en pesos argentinos o en dólares?</strong
+              <div class="accordion-body">
+                Sí. El acompañamiento no termina con la entrega: ofrezco
+                mantenimiento, corrección de errores y mejoras continuas para
+                que la solución siga funcionando bien a medida que tu negocio
+                crece.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour"
+                aria-expanded="false"
+                aria-controls="flush-collapseFour"
+              >
+                <strong
+                  >¿Qué pasa si mi negocio ya usa otro sistema y quiero migrar o
+                  integrar algo nuevo?</strong
+                >
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFour"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
             >
-            Trabajo con clientes locales, por lo que las tarifas se cotizan en
-            pesos argentinos. Para proyectos de mayor envergadura o con
-            componentes que impliquen costos en moneda extranjera, se evalúa
-            puntualmente con cada cliente. En la reunión inicial te doy un
-            presupuesto claro y sin sorpresas.
-          </li>
-        </ul>
+              <div class="accordion-body">
+                No hay problema. Antes de desarrollar, analizamos qué
+                herramientas ya usás y evaluamos si conviene integrarlas,
+                migrarlas o reemplazarlas, siempre buscando la opción que menos
+                afecte tu operación diaria.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFive"
+                aria-expanded="false"
+                aria-controls="flush-collapseFive"
+              >
+                <strong
+                  >¿Tus tarifas están en pesos argentinos o en dólares?</strong
+                >
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFive"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Trabajo con clientes locales, por lo que las tarifas se cotizan
+                en pesos argentinos. Para proyectos de mayor envergadura o con
+                componentes que impliquen costos en moneda extranjera, se evalúa
+                puntualmente con cada cliente. En la reunión inicial te doy un
+                presupuesto claro y sin sorpresas.
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="footer">
