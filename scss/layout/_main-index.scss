@@ -1,0 +1,148 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+/* Página de inicio (main-index) */
+
+.main-index {
+  flex: 1;
+  background-image: url('../recursos/imagenes/negocio/oficina1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+
+  h1 {
+    @include panel($fondo-oscuro);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+    color: $color-blanco;
+    padding: 20px 0px 20px 0px;
+  }
+
+  @include tipografia-contenido($color-blanco);
+
+  .presentacion {
+    @include panel($fondo-oscuro);
+    @include separacion-seccion;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    color: $color-blanco;
+  }
+
+  .informacion-general {
+    @include panel($fondo-oscuro-suave);
+    @include separacion-seccion;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "intro"
+      "destacado";
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+
+    h2 {
+      grid-area: titulo;
+      align-self: center;
+      text-align: center;
+      color: $color-blanco;
+    }
+
+    .quienes-somos,
+    .por-que-elegirnos {
+      text-align: center;
+      background-color: $fondo-crema;
+      border-radius: 15px;
+      height: auto;
+      padding: 10px;
+    }
+
+    .quienes-somos {
+      grid-area: intro;
+    }
+
+    .por-que-elegirnos {
+      grid-area: destacado;
+    }
+
+    @include desde($bp-escritorio) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "titulo titulo"
+        "intro destacado";
+
+      .quienes-somos,
+      .por-que-elegirnos {
+        height: 100%;
+      }
+    }
+  }
+
+  .oficinas {
+    @include panel($fondo-oscuro-suave);
+    @include separacion-seccion;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "carousel";
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+
+    h2 {
+      grid-area: titulo;
+      align-self: center;
+      text-align: center;
+      color: $color-blanco;
+    }
+
+    .carousel-item img {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .carousel.slide {
+      grid-area: carousel;
+      width: 100%;
+      justify-self: center;
+
+      @include desde($bp-tablet) {
+        width: 85%;
+      }
+
+      @include desde($bp-escritorio) {
+        width: 70%;
+      }
+    }
+
+    p {
+      text-align: center;
+      color: $color-blanco;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  }
+
+  .servicios {
+    @include panel($fondo-oscuro);
+    @include separacion-seccion;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    color: $color-blanco;
+
+    ul {
+      margin: 10px;
+      padding-left: 20px;
+      color: $color-blanco;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  gap: 5px;
+  top: 0;
+  z-index: 1030;
+  background-image: $gradiente;
+  height: auto;
+  padding: 10px;
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    transform: scale(1);
+    @include transicion-transform;
+
+    img {
+      background-color: $color-blanco;
+      height: 42px;
+      width: 100px;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 255);
+      background-image: linear-gradient(45deg, $color-azul, $color-amarillo);
+      transform: scale(1.05);
+      @include transicion-transform;
+    }
+
+    &:active {
+      transform: scale(1.10);
+      @include transicion-transform;
+    }
+  }
+}

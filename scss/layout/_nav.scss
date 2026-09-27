@@ -1,0 +1,42 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+/* Navegador */
+
+.navbar.navbar-expand-md.navbar-light {
+  background-color: #ffffff00; // Fondo transparente para la navbar
+}
+
+.navbar.navbar-expand-md.bg-transparent.navbar-transparent {
+  a {
+    text-align: center;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.9);
+      // Nota: el original usa 183 (no 184, que sería $color-amarillo exacto);
+      // se respeta el valor literal para no alterar el resultado visual.
+      background-color: rgba(255, 183, 28, 0.2);
+      border-radius: 10px;
+      transform: scale(1.05);
+      @include transicion-transform(0.3s);
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: scale(1.10);
+      @include transicion-transform(0.3s);
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-link.active {
+    color: rgb(0, 0, 0);
+    font-weight: semi-bold;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+}

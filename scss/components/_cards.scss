@@ -1,0 +1,99 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+/* Cards de Bootstrap (contacto.html) */
+
+.main .section-contacto-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3";
+  align-items: stretch;
+  gap: 20px;
+  padding: 20px;
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  img {
+    width: 50px;
+  }
+
+  p {
+    padding: 0px;
+    font-size: 80%;
+  }
+
+  .card-body a {
+    font-size: 80%;
+    border: none;
+  }
+
+  a:hover {
+    background-color: $color-azul-hover;
+    transform: scale(1.05);
+    @include transicion-transform;
+  }
+
+  .card-mail,
+  .card-whatsapp,
+  .card-github {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    text-align: center;
+    background-color: $color-crema;
+    border-radius: 15px;
+    border: 2px solid $color-crema-borde;
+    padding: 20px;
+  }
+
+  .card-mail {
+    grid-area: card1;
+  }
+
+  .card-whatsapp {
+    grid-area: card2;
+  }
+
+  .card-github {
+    grid-area: card3;
+  }
+
+  @include desde($bp-tablet) {
+    .card-body {
+
+      p,
+      a {
+        font-size: 100%;
+      }
+    }
+  }
+
+  @include desde($bp-escritorio) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas: "card1 card2 card3";
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-mail,
+    .card-whatsapp,
+    .card-github {
+      height: 100%;
+    }
+  }
+}

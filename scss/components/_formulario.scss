@@ -1,0 +1,18 @@
+@use '../utilities/variables' as *;
+
+/* Formulario de Bootstrap (contacto.html) */
+
+.main .section-contacto-form .formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: $color-crema;
+  border-radius: 15px;
+  border: 2px solid $color-crema-borde;
+  padding: 20px;
+
+  input:focus {
+    outline: none;
+    border: 3px solid $color-azul-hover;
+  }
+}

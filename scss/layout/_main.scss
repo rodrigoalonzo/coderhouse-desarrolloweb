@@ -1,0 +1,112 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+/* Main de resto de páginas (excepto inicio.html) */
+
+.main {
+  flex: 1;
+  background-image: $gradiente-3;
+  padding: 10px;
+
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+    color: $color-texto;
+    padding: 20px 0px 20px 0px;
+  }
+
+  @include tipografia-contenido($color-texto);
+
+  .presentacion {
+    @include separacion-seccion;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .section-sobremi-profesional,
+  .section-sobremi-personal {
+    @include separacion-seccion;
+    text-align: center;
+    background-color: $color-crema;
+    border-radius: 15px;
+    border: 2px solid $color-crema-borde;
+    padding: 10px;
+  }
+
+  .section-proyectos {
+    @include separacion-seccion;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "proyectos";
+    align-items: start;
+    gap: 20px;
+    padding: 20px;
+
+    h2 {
+      grid-area: titulo;
+      align-self: center;
+      text-align: center;
+    }
+
+    .carousel.slide {
+      grid-area: proyectos;
+      width: 100%;
+      justify-self: center;
+      padding: 10px;
+      background-color: #333333;
+      border-radius: 20px;
+
+      @include desde($bp-tablet) {
+        width: 85%;
+      }
+
+      @include desde($bp-escritorio) {
+        width: 65%;
+      }
+    }
+  }
+
+  .section-faq {
+    @include separacion-seccion;
+    padding: 20px;
+  }
+
+  .intro-contacto {
+    text-align: center;
+  }
+
+  .section-contacto-info {
+    @include separacion-seccion;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+
+    h2 {
+      text-align: center;
+    }
+
+    ul {
+      margin: 10px;
+      padding-left: 20px;
+    }
+  }
+
+  .section-contacto-form {
+    @include separacion-seccion;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+
+    h2 {
+      text-align: center;
+    }
+  }
+}

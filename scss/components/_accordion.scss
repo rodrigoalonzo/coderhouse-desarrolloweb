@@ -1,0 +1,30 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+/* Accordion de Bootstrap (servicios.html) */
+
+.main .section-faq {
+  .accordion-header:hover {
+    background-color: rgba($color-azul, 0.3);
+  }
+
+  .accordion-button {
+    &.collapsed {
+      background-color: rgba($color-azul, 0.30);
+      transform: scale(1);
+      @include transicion-transform;
+    }
+
+    &:not(.collapsed) {
+      background-color: $color-azul;
+      color: $color-blanco;
+      transform: scale(1.01);
+      @include transicion-transform;
+    }
+  }
+
+  .accordion-body {
+    background-color: $color-crema;
+    padding: 30px;
+  }
+}
