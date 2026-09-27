@@ -50,7 +50,7 @@
 
   .ws {
     @include desde($bp-escritorio) {
-      right: 10px;
+      left: 75px;
     }
 
     &:hover {
@@ -62,7 +62,7 @@
 
   .ig {
     @include desde($bp-escritorio) {
-      right: 75px;
+      left: 10px;
     }
 
     &:hover {

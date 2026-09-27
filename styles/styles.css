@@ -462,7 +462,7 @@ body {
 }
 @media (min-width: 1024px) {
   .footer .ws {
-    right: 10px;
+    left: 75px;
   }
 }
 .footer .ws:hover {
@@ -472,7 +472,7 @@ body {
 }
 @media (min-width: 1024px) {
   .footer .ig {
-    right: 75px;
+    left: 10px;
   }
 }
 .footer .ig:hover {
