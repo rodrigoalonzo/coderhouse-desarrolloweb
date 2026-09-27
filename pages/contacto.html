@@ -4,19 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/styles.css" />
-    <title>Contacto</title>
+    <title>Contacto | Rodrigo Javier Alonzo, desarrollo web</title>
+    <meta
+      name="description"
+      content="¿Tenés un proyecto en mente? Contactame por email, WhatsApp o el formulario y conversemos sobre cómo el software a medida puede ayudar a tu negocio."
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header class="header">
       <a href="../index.html" class="logo">
         <img
-          src="../recursos/imagenes/logos/logoEmpresa.png"
+          src="../recursos/imagenes/logos/logo-empresa.png"
           alt="Logo de la empresa"
         />
       </a>
@@ -70,10 +75,16 @@
       </p>
       <section class="section-contacto-info" id="section-contacto-info">
         <h2>Información de contacto</h2>
-        <section class="section-contacto-cards" id="section-contacto-cards">
+        <section
+          class="section-contacto-cards"
+          id="section-contacto-cards"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        >
           <div class="card-mail">
             <img
-              src="../recursos/imagenes/logos/gmailLogo2.png"
+              src="../recursos/imagenes/logos/logo-gmail-card.png"
               class="card-img-top"
               alt="Logo de Gmail"
             />
@@ -92,7 +103,7 @@
           </div>
           <div class="card-whatsapp">
             <img
-              src="../recursos/imagenes/logos/whatsappLogo3.png"
+              src="../recursos/imagenes/logos/logo-whatsapp-card.png"
               class="card-img-top"
               alt="Logo de WhatsApp"
             />
@@ -113,7 +124,7 @@
           </div>
           <div class="card-github">
             <img
-              src="../recursos/imagenes/logos/githubLogo.png"
+              src="../recursos/imagenes/logos/logo-github-card.png"
               class="card-img-top"
               alt="Logo de GitHub"
             />
@@ -200,7 +211,7 @@
         rel="noopener noreferrer"
       >
         <img
-          src="../recursos/imagenes/logos/instagram.png"
+          src="../recursos/imagenes/logos/icono-instagram-footer.png"
           alt="Logo de instagram"
         />
       </a>
@@ -211,7 +222,7 @@
         rel="noopener noreferrer"
       >
         <img
-          src="../recursos/imagenes/logos/whatsapp.png"
+          src="../recursos/imagenes/logos/icono-whatsapp-footer.png"
           alt="Logo de whatsapp"
         />
       </a>
@@ -221,5 +232,9 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

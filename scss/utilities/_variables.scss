@@ -32,3 +32,8 @@ $bp-escritorio: 1024px;
 
 /* Transiciones */
 $duracion-transicion: 0.5s;
+
+/* Animaciones */
+$animacion-titulo-desde: rgba(255, 255, 255, 1);
+$animacion-titulo-hasta: rgba(0, 0, 0, 0.75);
+$duracion-animacion-titulo: 3s;

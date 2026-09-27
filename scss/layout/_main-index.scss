@@ -3,9 +3,23 @@
 
 /* Página de inicio (main-index) */
 
+/* Animación del título: fondo de blanco a negro */
+@keyframes titulo-aparecer {
+  0% {background-color: $animacion-titulo-desde;}
+  100% {background-color: $animacion-titulo-hasta;}
+}
+
+/* Títulos h2 */
+%titulo-seccion {
+  grid-area: titulo;
+  align-self: center;
+  text-align: center;
+  color: $color-blanco;
+}
+
 .main-index {
   flex: 1;
-  background-image: url('../recursos/imagenes/negocio/oficina1.jpg');
+  background-image: url('../recursos/imagenes/negocio/fondo-oficina.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,6 +33,11 @@
     font-style: italic;
     color: $color-blanco;
     padding: 20px 0px 20px 0px;
+    animation: titulo-aparecer $duracion-animacion-titulo ease-in-out;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
   }
 
   @include tipografia-contenido($color-blanco);
@@ -48,10 +67,7 @@
     padding: 20px;
 
     h2 {
-      grid-area: titulo;
-      align-self: center;
-      text-align: center;
-      color: $color-blanco;
+      @extend %titulo-seccion;
     }
 
     .quienes-somos,
@@ -97,10 +113,7 @@
     padding: 20px;
 
     h2 {
-      grid-area: titulo;
-      align-self: center;
-      text-align: center;
-      color: $color-blanco;
+      @extend %titulo-seccion;
     }
 
     .carousel-item img {

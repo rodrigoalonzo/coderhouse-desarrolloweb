@@ -10,6 +10,7 @@
 /* Gradientes */
 /* Breakpoints */
 /* Transiciones */
+/* Animaciones */
 :root {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 16px;
@@ -106,15 +107,32 @@ body {
 }
 .navbar.navbar-expand-md.bg-transparent.navbar-transparent .nav-link.active {
   color: rgb(0, 0, 0);
-  font-weight: semi-bold;
+  font-weight: 600;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
 }
 
 /* Página de inicio (main-index) */
+/* Animación del título: fondo de blanco a negro */
+@keyframes titulo-aparecer {
+  0% {
+    background-color: rgb(255, 255, 255);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+}
+/* Títulos h2 */
+.main-index .oficinas h2, .main-index .informacion-general h2 {
+  grid-area: titulo;
+  align-self: center;
+  text-align: center;
+  color: #ffffff;
+}
+
 .main-index {
   flex: 1;
-  background-image: url("../recursos/imagenes/negocio/oficina1.jpg");
+  background-image: url("../recursos/imagenes/negocio/fondo-oficina.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -130,6 +148,12 @@ body {
   font-style: italic;
   color: #ffffff;
   padding: 20px 0px 20px 0px;
+  animation: titulo-aparecer 3s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .main-index h1 {
+    animation: none;
+  }
 }
 .main-index h2 {
   font-weight: 500;
@@ -183,12 +207,6 @@ body {
   gap: 20px;
   padding: 20px;
 }
-.main-index .informacion-general h2 {
-  grid-area: titulo;
-  align-self: center;
-  text-align: center;
-  color: #ffffff;
-}
 .main-index .informacion-general .quienes-somos,
 .main-index .informacion-general .por-que-elegirnos {
   text-align: center;
@@ -225,12 +243,6 @@ body {
   align-items: center;
   gap: 20px;
   padding: 20px;
-}
-.main-index .oficinas h2 {
-  grid-area: titulo;
-  align-self: center;
-  text-align: center;
-  color: #ffffff;
 }
 .main-index .oficinas .carousel-item img {
   aspect-ratio: 16/9;
